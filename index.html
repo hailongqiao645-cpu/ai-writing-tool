@@ -83,7 +83,11 @@
         <select aria-label="创作类型"><option>选择创作类型</option><option>短视频爆款口播</option><option>小红书种草笔记</option><option>视频脚本</option><option>小说章节</option><option>商品营销文案</option><option>朋友圈文案</option></select>
         <select aria-label="内容风格"><option>选择内容风格</option><option>人生感悟</option><option>情感故事</option><option>职场励志</option><option>创业逆袭</option><option>武侠古风</option><option>玄幻修仙</option><option>悬疑推理</option></select>
       </div>
-      <button class="generate" type="button">✨ 生成爆款作品</button>
+      <button class="generate" type="button" onclick="generateAI()">
+
+✨ 生成爆款作品
+
+</button>
       <div class="templates"><span>热门模板：</span><button class="template" type="button" data-topic="35岁男人重新开始人生">35岁重新开始</button><button class="template" type="button" data-topic="宝妈创业逆袭的真实故事">宝妈创业逆袭</button><button class="template" type="button" data-topic="职场低谷后如何重新找回自信">职场低谷重生</button><button class="template" type="button" data-topic="一段古风小说的开篇剧情">古风小说开篇</button></div>
     </section>
 
@@ -105,7 +109,67 @@
     <footer class="footer">AI爆款文案大师 · 智能内容创作平台</footer>
   </main>
   <script>
-    document.querySelectorAll('.template').forEach(function (button) { button.addEventListener('click', function () { document.getElementById('topic').value = button.dataset.topic; document.getElementById('topic').focus(); }); });
+    async function generateAI(){
+
+const textarea=document.querySelector("textarea");
+
+const result=document.querySelector(".result");
+
+
+if(!textarea.value){
+
+alert("请输入创作主题");
+
+return;
+
+}
+
+
+result.innerHTML="🤖 AI正在创作中，请稍等...";
+
+
+try{
+
+
+const res=await fetch("/api/generate",{
+
+method:"POST",
+
+headers:{
+
+"Content-Type":"application/json"
+
+},
+
+body:JSON.stringify({
+
+prompt:textarea.value
+
+})
+
+});
+
+
+const data=await res.json();
+
+
+result.innerHTML=
+
+"<h2>🤖 AI生成结果</h2><br>"+
+
+data.result.replace(/\n/g,"<br>");
+
+
+}catch(error){
+
+
+result.innerHTML="生成失败，请检查接口配置";
+
+
+}
+
+
+}
   </script>
 
 
