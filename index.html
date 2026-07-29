@@ -13,234 +13,252 @@
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:"Microsoft YaHei",Arial,sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Microsoft YaHei",Arial,sans-serif;
 }
 
 
 body{
 
-background:#050816;
+    background:
+    radial-gradient(circle at top,#20254a,#050816 60%);
 
-color:white;
+    color:white;
 
 }
 
 
 .container{
 
-max-width:1100px;
+    max-width:1100px;
 
-margin:auto;
+    margin:auto;
 
-padding:30px 20px;
+    padding:20px;
 
 }
 
 
-/*顶部*/
+
+/* 顶部导航 */
 
 .header{
 
-display:flex;
+    display:flex;
 
-justify-content:space-between;
+    justify-content:space-between;
 
-align-items:center;
+    align-items:center;
 
-padding:20px 0;
+    padding:15px 0;
 
 }
 
 
 .logo{
 
-font-size:30px;
+    font-size:26px;
 
-font-weight:bold;
+    font-weight:bold;
 
-color:#ffd700;
+    color:#ffd700;
 
 }
 
 
 .nav span{
 
-margin-left:20px;
+    margin-left:18px;
 
-color:#aaa;
+    color:#aaa;
+
+    font-size:15px;
 
 }
 
 
 
-/*首页标题*/
+/* 主视觉 */
 
 .hero{
 
-text-align:center;
+    text-align:center;
 
-padding:60px 0 30px;
+    padding:50px 0 30px;
 
 }
 
 
 .hero h1{
 
-font-size:48px;
+    font-size:44px;
 
-line-height:1.4;
+    line-height:1.35;
 
-background:linear-gradient(90deg,#ffd700,#ff8800);
+    background:
 
--webkit-background-clip:text;
+    linear-gradient(90deg,#ffd700,#ff9900);
 
-color:transparent;
+    -webkit-background-clip:text;
+
+    color:transparent;
 
 }
 
 
 .hero p{
 
-margin-top:20px;
+    margin-top:18px;
 
-font-size:20px;
+    font-size:18px;
 
-color:#aaa;
+    color:#aaa;
 
 }
 
 
 
-/*卡片*/
+/* 主卡片 */
 
 .card{
 
-background:
+    background:
 
-rgba(255,255,255,.08);
+    rgba(255,255,255,.08);
 
-border:
+    border:
 
-1px solid rgba(255,255,255,.15);
+    1px solid rgba(255,255,255,.15);
 
-border-radius:25px;
+    border-radius:24px;
 
-padding:35px;
+    padding:30px;
 
-margin-top:30px;
+    margin-top:25px;
+
+    backdrop-filter:blur(15px);
 
 }
 
 
 
-/*输入框*/
+/* 标题 */
+
+.card h2{
+
+    font-size:22px;
+
+}
+
+
+
+/* 输入框 */
 
 textarea{
 
-width:100%;
+    width:100%;
 
-height:150px;
+    height:120px;
 
-padding:20px;
+    margin-top:15px;
 
-border-radius:15px;
+    padding:18px;
 
-border:none;
+    border-radius:15px;
 
-outline:none;
+    border:none;
 
-background:#111827;
+    outline:none;
 
-color:white;
+    resize:none;
 
-font-size:16px;
+    background:#101625;
+
+    color:white;
+
+    font-size:16px;
 
 }
 
 
 
-/*选择*/
+/* 下拉选择 */
 
 select{
 
-width:100%;
+    width:100%;
 
-margin-top:15px;
+    margin-top:15px;
 
-padding:16px;
+    padding:15px;
 
-border-radius:15px;
+    border-radius:14px;
 
-border:none;
+    border:none;
 
-background:#111827;
+    background:#101625;
 
-color:white;
+    color:white;
 
-font-size:16px;
+    font-size:16px;
 
 }
 
 
 
-/*按钮*/
+/* 按钮 */
 
 button{
 
-width:100%;
+    width:100%;
 
-height:65px;
+    height:58px;
 
-margin-top:30px;
+    margin-top:25px;
 
-border:none;
+    border:none;
 
-border-radius:35px;
+    border-radius:30px;
 
-background:
+    background:
 
-linear-gradient(90deg,#ffd700,#ff9800);
+    linear-gradient(90deg,#ffd700,#ff9800);
 
-font-size:20px;
+    color:#111;
 
-font-weight:bold;
+    font-size:19px;
 
-cursor:pointer;
+    font-weight:bold;
 
-color:#111;
+    cursor:pointer;
 
-box-shadow:
+    box-shadow:
 
-0 0 30px rgba(255,200,0,.5);
+    0 0 25px rgba(255,190,0,.5);
 
-transition:.3s;
+    transition:.3s;
 
 }
 
 
 button:hover{
 
-transform:translateY(-3px);
-
-box-shadow:
-
-0 0 50px rgba(255,200,0,.8);
+    transform:translateY(-3px);
 
 }
 .result{
 
-margin-top:30px;
+    margin-top:25px;
 
-background:#111827;
+    background:#111827;
 
-padding:25px;
+    border-radius:20px;
 
-border-radius:20px;
+    padding:25px;
 
-line-height:1.8;
+    line-height:1.8;
 
 }
 
@@ -248,100 +266,205 @@ line-height:1.8;
 
 .tag{
 
-display:inline-block;
+    display:inline-block;
 
-padding:8px 15px;
+    background:#222;
 
-border-radius:20px;
+    color:#ffd700;
 
-background:#222;
+    padding:8px 14px;
 
-color:#ffd700;
+    border-radius:20px;
 
-margin:5px;
+    margin:5px;
+
+    font-size:14px;
 
 }
 
 
+
+/* 功能区域 */
 
 .features{
 
-display:flex;
+    display:flex;
 
-gap:20px;
+    gap:20px;
 
-margin-top:40px;
+    flex-wrap:wrap;
 
-flex-wrap:wrap;
+    margin-top:35px;
 
 }
-
 
 
 .feature{
 
-flex:1;
+    flex:1;
 
-min-width:250px;
+    min-width:240px;
 
-background:
+    background:
 
-rgba(255,255,255,.08);
+    rgba(255,255,255,.08);
 
-border:
+    border-radius:20px;
 
-1px solid rgba(255,255,255,.15);
+    padding:25px;
 
-padding:30px;
+    border:
 
-border-radius:20px;
+    1px solid rgba(255,255,255,.15);
 
 }
-
 
 
 .feature h3{
 
-color:#ffd700;
+    color:#ffd700;
 
-margin-bottom:15px;
+    margin-bottom:12px;
 
 }
+
+
+
+/* 会员区域 */
+
+.vip{
+
+    margin-top:35px;
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+
+.vip-box{
+
+    flex:1;
+
+    min-width:260px;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    background:
+
+    rgba(255,255,255,.08);
+
+}
+
+
+
+.vip-box h3{
+
+    color:#ffd700;
+
+}
+
 
 
 .footer{
 
-text-align:center;
+    text-align:center;
 
-margin:50px 0;
+    color:#777;
 
-color:#777;
+    margin:50px 0 20px;
 
 }
 
 
 
-/*手机适配*/
+/* 手机优化 */
 
 @media(max-width:700px){
 
-.hero h1{
 
-font-size:32px;
+.container{
+
+    padding:15px;
+
+}
+
+
+.logo{
+
+    font-size:22px;
 
 }
 
 
 .nav{
 
-display:none;
+    display:none;
+
+}
+
+
+.hero{
+
+    padding:35px 0 20px;
+
+}
+
+
+.hero h1{
+
+    font-size:30px;
+
+}
+
+
+.hero p{
+
+    font-size:16px;
 
 }
 
 
 .card{
 
-padding:20px;
+    padding:20px;
+
+    border-radius:18px;
+
+}
+
+
+.card h2{
+
+    font-size:19px;
+
+}
+
+
+textarea{
+
+    height:110px;
+
+}
+
+
+button{
+
+    height:52px;
+
+    font-size:17px;
+
+}
+
+
+.feature{
+
+    min-width:100%;
 
 }
 
@@ -354,7 +477,9 @@ padding:20px;
 </head>
 
 
+
 <body>
+
 
 
 <div class="container">
@@ -373,16 +498,19 @@ padding:20px;
 </div>
 
 
+
 <div class="nav">
 
 <span>首页</span>
 
-<span>文案生成</span>
+<span>AI文案</span>
 
 <span>AI绘图</span>
 
 <span>视频脚本</span>
 
+<span>登录</span>
+
 </div>
 
 
@@ -391,7 +519,8 @@ padding:20px;
 
 
 
-<!--标题-->
+
+<!--主标题-->
 
 <div class="hero">
 
@@ -400,14 +529,14 @@ padding:20px;
 
 每天10秒<br>
 
-生成百万播放级短视频文案
+创造你的爆款内容
 
 </h1>
 
 
 <p>
 
-AI帮你打造爆款内容，让创作更简单
+AI帮你生成短视频、小说、营销级原创文案
 
 </p>
 
@@ -417,22 +546,26 @@ AI帮你打造爆款内容，让创作更简单
 
 
 
-<!--输入区域-->
+
+<!--创作区域-->
 
 <div class="card">
 
 
 <h2>
 
-输入你的创作主题
+✍️ 开始AI创作
 
 </h2>
 
 
-<br>
+
+<textarea placeholder="请输入你的主题，例如：35岁男人重新开始人生">
 
 
-<textarea placeholder="例如：写一个关于中年重新开始的人生感悟视频"></textarea>
+</textarea>
+
+
 
 
 
@@ -440,35 +573,56 @@ AI帮你打造爆款内容，让创作更简单
 
 <option>
 
-选择发布平台
+选择创作类型
 
 </option>
 
 
 <option>
 
-抖音
+短视频口播
 
 </option>
 
 
 <option>
 
-小红书
+小红书笔记
 
 </option>
 
 
 <option>
 
-视频号
+朋友圈文案
 
 </option>
 
 
 <option>
 
-快手
+小说章节
+
+</option>
+
+
+<option>
+
+视频脚本
+
+</option>
+
+
+<option>
+
+商品营销文案
+
+</option>
+
+
+<option>
+
+公众号文章
 
 </option>
 
@@ -478,7 +632,9 @@ AI帮你打造爆款内容，让创作更简单
 
 
 
+
 <select>
+
 
 <option>
 
@@ -489,33 +645,76 @@ AI帮你打造爆款内容，让创作更简单
 
 <option>
 
-情感共鸣
+❤️ 情感共鸣
 
 </option>
 
 
 <option>
 
-爆款营销
+🌱 人生感悟
 
 </option>
 
 
 <option>
 
-故事叙事
+💼 职场励志
 
 </option>
 
 
 <option>
 
-古风文案
+🚀 创业逆袭
+
+</option>
+
+
+<option>
+
+📖 小说创作
+
+</option>
+
+
+<option>
+
+⚔️ 武侠古风
+
+</option>
+
+
+<option>
+
+🏮 玄幻修仙
+
+</option>
+
+
+<option>
+
+💕 言情爱情
+
+</option>
+
+
+<option>
+
+👻 悬疑故事
+
+</option>
+
+
+<option>
+
+🔥 爆款营销
 
 </option>
 
 
 </select>
+
 
 
 
@@ -530,7 +729,7 @@ AI帮你打造爆款内容，让创作更简单
 
 <h2>
 
-AI生成结果
+🤖 AI生成示例
 
 </h2>
 
@@ -544,7 +743,7 @@ AI生成结果
 
 <br>
 
-成年人最大的清醒，是接受人生没有标准答案。
+35岁以后，人生真正的开始，不是重新选择，而是重新认识自己。
 
 </p>
 
@@ -559,7 +758,7 @@ AI生成结果
 
 <br>
 
-你有没有发现，人到了一定年龄，最大的改变不是变成熟，而是不再抱怨。
+如果你也曾在人生最低谷怀疑过自己，请记住，没有任何一个冬天不会过去。
 
 </p>
 
@@ -574,9 +773,11 @@ AI生成结果
 
 <br>
 
-真正厉害的人，不是没有经历过低谷，而是在低谷之后依然选择重新开始。
+人生没有所谓的太晚。
 
-人生没有白走的路，每一次经历，都会成为未来的力量。
+曾经走过的弯路，经历过的失败，遇见过的人，都会成为未来成长的力量。
+
+真正强大的人，不是没有跌倒过，而是每一次跌倒后，都选择重新站起来。
 
 </p>
 
@@ -592,9 +793,6 @@ AI生成结果
 </p>
 
 
-<br>
-
-
 <span class="tag">
 
 #人生感悟
@@ -604,7 +802,7 @@ AI生成结果
 
 <span class="tag">
 
-#成长
+#成长励志
 
 </span>
 
@@ -626,8 +824,7 @@ AI生成结果
 
 
 
-<!--功能区域-->
-
+<!--功能模块-->
 
 <div class="features">
 
@@ -645,7 +842,7 @@ AI生成结果
 
 <p>
 
-AI分析热门内容，自动生成高点击标题，提高视频打开率。
+AI分析热门内容，快速生成高点击标题，提高视频打开率。
 
 </p>
 
@@ -667,7 +864,7 @@ AI分析热门内容，自动生成高点击标题，提高视频打开率。
 
 <p>
 
-自动生成短视频完整脚本、口播文案和故事结构。
+自动生成短视频分镜、口播稿、剧情结构。
 
 </p>
 
@@ -682,14 +879,14 @@ AI分析热门内容，自动生成高点击标题，提高视频打开率。
 
 <h3>
 
-🎨 AI提示词生成
+📖 AI小说创作
 
 </h3>
 
 
 <p>
 
-生成专业AI绘画和视频制作提示词。
+辅助生成小说人物、剧情、大纲和章节内容。
 
 </p>
 
@@ -704,10 +901,93 @@ AI分析热门内容，自动生成高点击标题，提高视频打开率。
 
 
 
+<!--会员区域-->
+
+<div class="vip">
+
+
+
+<div class="vip-box">
+
+
+<h3>
+
+免费体验版
+
+</h3>
+
+
+<br>
+
+
+<p>
+
+每日免费生成5次
+
+<br>
+
+基础文案模板
+
+<br>
+
+适合普通创作者
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="vip-box">
+
+
+<h3>
+
+VIP创作会员
+
+</h3>
+
+
+<br>
+
+
+<p>
+
+无限生成
+
+<br>
+
+高级AI模型
+
+<br>
+
+保存历史作品
+
+<br>
+
+专属创作模板
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
 <div class="footer">
 
 
-AI爆款文案大师 · 智能创作平台
+AI爆款文案大师 · 智能内容创作平台
 
 
 </div>
@@ -723,3 +1003,5 @@ AI爆款文案大师 · 智能创作平台
 
 
 </html>
+
+
