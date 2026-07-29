@@ -20,18 +20,18 @@ module.exports = async function handler(req, res) {
 
 
     const response = await fetch(
-      "https://api.deepseek.com/chat/completions",
+      "https://api.siliconflow.cn/v1/chat/completions",
       {
         method: "POST",
 
         headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer ${process.env.DEEPSEEK_API_KEY}`
+          "Authorization": `Bearer ${process.env.SILICONFLOW_API_KEY}`
         },
 
         body: JSON.stringify({
 
-          model: "deepseek-chat",
+          model: "deepseek-ai/DeepSeek-V3",
 
           messages: [
 
