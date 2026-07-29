@@ -1,470 +1,255 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>AI爆款文案大师</title>
 
-
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:"Microsoft YaHei",Arial,sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
-
 
 body{
+background:#050816;
+color:#fff;
+font-family:Arial,"Microsoft YaHei",sans-serif;
+}
 
-    background:
-    radial-gradient(circle at top,#20254a,#050816 60%);
+.container{
+width:100%;
+max-width:900px;
+margin:auto;
+padding:20px;
+}
 
-    color:white;
+
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:10px 0;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+color:#ffd700;
+}
+
+
+.nav{
+color:#aaa;
+font-size:14px;
+}
+
+
+.hero{
+text-align:center;
+padding:40px 10px;
+}
+
+
+.hero h1{
+font-size:34px;
+line-height:1.4;
+color:#ffd700;
+}
+
+
+.hero p{
+margin-top:15px;
+color:#aaa;
+font-size:16px;
+}
+
+
+.card{
+
+background:#111827;
+
+border-radius:20px;
+
+padding:20px;
+
+margin-top:20px;
 
 }
 
+
+h2{
+font-size:20px;
+}
+
+
+textarea{
+
+width:100%;
+
+height:120px;
+
+margin-top:15px;
+
+background:#050816;
+
+border:1px solid #333;
+
+border-radius:12px;
+
+padding:15px;
+
+color:white;
+
+font-size:16px;
+
+}
+
+
+select{
+
+width:100%;
+
+margin-top:15px;
+
+height:50px;
+
+background:#050816;
+
+color:white;
+
+border:1px solid #333;
+
+border-radius:12px;
+
+padding:10px;
+
+font-size:15px;
+
+}
+
+
+button{
+
+width:100%;
+
+height:55px;
+
+margin-top:20px;
+
+border:0;
+
+border-radius:30px;
+
+background:#ffd700;
+
+font-size:18px;
+
+font-weight:bold;
+
+}
+
+
+.result{
+
+margin-top:20px;
+
+background:#050816;
+
+padding:20px;
+
+border-radius:15px;
+
+line-height:1.8;
+
+}
+
+
+.tag{
+
+display:inline-block;
+
+background:#222;
+
+color:#ffd700;
+
+padding:6px 12px;
+
+border-radius:20px;
+
+margin:5px;
+
+}
+
+
+.features{
+
+margin-top:20px;
+
+}
+
+
+.item{
+
+background:#111827;
+
+padding:20px;
+
+border-radius:15px;
+
+margin-top:15px;
+
+}
+
+
+.item h3{
+
+color:#ffd700;
+
+}
+
+
+.footer{
+
+text-align:center;
+
+margin:40px 0;
+
+color:#777;
+
+}
+
+
+@media(max-width:600px){
 
 .container{
 
-    max-width:1100px;
-
-    margin:auto;
-
-    padding:20px;
-
-}
-
-
-
-/* 顶部导航 */
-
-.header{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    padding:15px 0;
-
-}
-
-
-.logo{
-
-    font-size:26px;
-
-    font-weight:bold;
-
-    color:#ffd700;
-
-}
-
-
-.nav span{
-
-    margin-left:18px;
-
-    color:#aaa;
-
-    font-size:15px;
-
-}
-
-
-
-/* 主视觉 */
-
-.hero{
-
-    text-align:center;
-
-    padding:50px 0 30px;
+padding:15px;
 
 }
 
 
 .hero h1{
 
-    font-size:44px;
-
-    line-height:1.35;
-
-    background:
-
-    linear-gradient(90deg,#ffd700,#ff9900);
-
-    -webkit-background-clip:text;
-
-    color:transparent;
-
-}
-
-
-.hero p{
-
-    margin-top:18px;
-
-    font-size:18px;
-
-    color:#aaa;
-
-}
-
-
-
-/* 主卡片 */
-
-.card{
-
-    background:
-
-    rgba(255,255,255,.08);
-
-    border:
-
-    1px solid rgba(255,255,255,.15);
-
-    border-radius:24px;
-
-    padding:30px;
-
-    margin-top:25px;
-
-    backdrop-filter:blur(15px);
-
-}
-
-
-
-/* 标题 */
-
-.card h2{
-
-    font-size:22px;
-
-}
-
-
-
-/* 输入框 */
-
-textarea{
-
-    width:100%;
-
-    height:120px;
-
-    margin-top:15px;
-
-    padding:18px;
-
-    border-radius:15px;
-
-    border:none;
-
-    outline:none;
-
-    resize:none;
-
-    background:#101625;
-
-    color:white;
-
-    font-size:16px;
-
-}
-
-
-
-/* 下拉选择 */
-
-select{
-
-    width:100%;
-
-    margin-top:15px;
-
-    padding:15px;
-
-    border-radius:14px;
-
-    border:none;
-
-    background:#101625;
-
-    color:white;
-
-    font-size:16px;
-
-}
-
-
-
-/* 按钮 */
-
-button{
-
-    width:100%;
-
-    height:58px;
-
-    margin-top:25px;
-
-    border:none;
-
-    border-radius:30px;
-
-    background:
-
-    linear-gradient(90deg,#ffd700,#ff9800);
-
-    color:#111;
-
-    font-size:19px;
-
-    font-weight:bold;
-
-    cursor:pointer;
-
-    box-shadow:
-
-    0 0 25px rgba(255,190,0,.5);
-
-    transition:.3s;
-
-}
-
-
-button:hover{
-
-    transform:translateY(-3px);
-
-}
-.result{
-
-    margin-top:25px;
-
-    background:#111827;
-
-    border-radius:20px;
-
-    padding:25px;
-
-    line-height:1.8;
-
-}
-
-
-
-.tag{
-
-    display:inline-block;
-
-    background:#222;
-
-    color:#ffd700;
-
-    padding:8px 14px;
-
-    border-radius:20px;
-
-    margin:5px;
-
-    font-size:14px;
-
-}
-
-
-
-/* 功能区域 */
-
-.features{
-
-    display:flex;
-
-    gap:20px;
-
-    flex-wrap:wrap;
-
-    margin-top:35px;
-
-}
-
-
-.feature{
-
-    flex:1;
-
-    min-width:240px;
-
-    background:
-
-    rgba(255,255,255,.08);
-
-    border-radius:20px;
-
-    padding:25px;
-
-    border:
-
-    1px solid rgba(255,255,255,.15);
-
-}
-
-
-.feature h3{
-
-    color:#ffd700;
-
-    margin-bottom:12px;
-
-}
-
-
-
-/* 会员区域 */
-
-.vip{
-
-    margin-top:35px;
-
-    display:flex;
-
-    gap:20px;
-
-    flex-wrap:wrap;
-
-}
-
-
-.vip-box{
-
-    flex:1;
-
-    min-width:260px;
-
-    padding:25px;
-
-    border-radius:20px;
-
-    background:
-
-    rgba(255,255,255,.08);
-
-}
-
-
-
-.vip-box h3{
-
-    color:#ffd700;
-
-}
-
-
-
-.footer{
-
-    text-align:center;
-
-    color:#777;
-
-    margin:50px 0 20px;
-
-}
-
-
-
-/* 手机优化 */
-
-@media(max-width:700px){
-
-
-.container{
-
-    padding:15px;
-
-}
-
-
-.logo{
-
-    font-size:22px;
+font-size:30px;
 
 }
 
 
 .nav{
 
-    display:none;
-
-}
-
-
-.hero{
-
-    padding:35px 0 20px;
-
-}
-
-
-.hero h1{
-
-    font-size:30px;
-
-}
-
-
-.hero p{
-
-    font-size:16px;
+display:none;
 
 }
 
 
 .card{
 
-    padding:20px;
-
-    border-radius:18px;
-
-}
-
-
-.card h2{
-
-    font-size:19px;
-
-}
-
-
-textarea{
-
-    height:110px;
-
-}
-
-
-button{
-
-    height:52px;
-
-    font-size:17px;
-
-}
-
-
-.feature{
-
-    min-width:100%;
+padding:18px;
 
 }
 
@@ -473,70 +258,44 @@ button{
 
 </style>
 
-
 </head>
-
 
 
 <body>
 
 
-
 <div class="container">
 
 
-
-<!--顶部-->
-
 <div class="header">
 
-
 <div class="logo">
-
 🔥 AI爆款文案大师
-
 </div>
-
 
 
 <div class="nav">
-
-<span>首页</span>
-
-<span>AI文案</span>
-
-<span>AI绘图</span>
-
-<span>视频脚本</span>
-
-<span>登录</span>
+AI创作平台
+</div>
 
 </div>
 
 
-</div>
-
-
-
-
-
-<!--主标题-->
 
 <div class="hero">
-
 
 <h1>
 
 每天10秒<br>
 
-创造你的爆款内容
+生成爆款内容
 
 </h1>
 
 
 <p>
 
-AI帮你生成短视频、小说、营销级原创文案
+AI帮你创作短视频、小说、营销文案
 
 </p>
 
@@ -545,177 +304,59 @@ AI帮你生成短视频、小说、营销级原创文案
 
 
 
-
-
-<!--创作区域-->
-
 <div class="card">
 
 
 <h2>
-
-✍️ 开始AI创作
-
+✍️ 开始创作
 </h2>
 
 
-
-<textarea placeholder="请输入你的主题，例如：35岁男人重新开始人生">
-
-
-</textarea>
-
-
+<textarea placeholder="请输入主题，例如：35岁男人重新开始人生"></textarea>
 
 
 
 <select>
 
-<option>
+<option>选择创作类型</option>
 
-选择创作类型
+<option>短视频口播</option>
 
-</option>
+<option>小红书笔记</option>
 
+<option>朋友圈文案</option>
 
-<option>
+<option>小说章节</option>
 
-短视频口播
+<option>视频脚本</option>
 
-</option>
-
-
-<option>
-
-小红书笔记
-
-</option>
-
-
-<option>
-
-朋友圈文案
-
-</option>
-
-
-<option>
-
-小说章节
-
-</option>
-
-
-<option>
-
-视频脚本
-
-</option>
-
-
-<option>
-
-商品营销文案
-
-</option>
-
-
-<option>
-
-公众号文章
-
-</option>
-
+<option>商品营销</option>
 
 </select>
-
-
 
 
 
 <select>
 
+<option>选择文案风格</option>
 
-<option>
+<option>人生感悟</option>
 
-选择文案风格
+<option>情感共鸣</option>
 
-</option>
+<option>职场励志</option>
 
+<option>创业逆袭</option>
 
-<option>
+<option>武侠古风</option>
 
-❤️ 情感共鸣
+<option>玄幻修仙</option>
 
-</option>
+<option>言情爱情</option>
 
-
-<option>
-
-🌱 人生感悟
-
-</option>
-
-
-<option>
-
-💼 职场励志
-
-</option>
-
-
-<option>
-
-🚀 创业逆袭
-
-</option>
-
-
-<option>
-
-📖 小说创作
-
-</option>
-
-
-<option>
-
-⚔️ 武侠古风
-
-</option>
-
-
-<option>
-
-🏮 玄幻修仙
-
-</option>
-
-
-<option>
-
-💕 言情爱情
-
-</option>
-
-
-<option>
-
-👻 悬疑故事
-
-</option>
-
-
-<option>
-
-🔥 爆款营销
-
-</option>
-
+<option>悬疑故事</option>
 
 </select>
-
-
 
 
 
@@ -724,284 +365,117 @@ AI帮你生成短视频、小说、营销级原创文案
 ✨ 立即生成爆款文案
 
 </button>
+
+
+
 <div class="result">
 
-
 <h2>
-
 🤖 AI生成示例
-
 </h2>
 
+<br>
+
+标题：
 
 <br>
 
-
-<p>
-
-<b>标题：</b>
-
-<br>
-
-35岁以后，人生真正的开始，不是重新选择，而是重新认识自己。
-
-</p>
+35岁以后，人生真正的开始，是重新认识自己。
 
 
+<br><br>
+
+开头3秒：
 
 <br>
 
-
-<p>
-
-<b>开头3秒：</b>
-
-<br>
-
-如果你也曾在人生最低谷怀疑过自己，请记住，没有任何一个冬天不会过去。
-
-</p>
+没有人能定义你的未来，除了你自己。
 
 
+<br><br>
+
+标签：
 
 <br>
-
-
-<p>
-
-<b>正文：</b>
-
-<br>
-
-人生没有所谓的太晚。
-
-曾经走过的弯路，经历过的失败，遇见过的人，都会成为未来成长的力量。
-
-真正强大的人，不是没有跌倒过，而是每一次跌倒后，都选择重新站起来。
-
-</p>
-
-
-
-<br>
-
-
-<p>
-
-<b>热门标签：</b>
-
-</p>
-
 
 <span class="tag">
-
 #人生感悟
-
 </span>
 
-
 <span class="tag">
-
-#成长励志
-
+#成长
 </span>
 
-
 <span class="tag">
-
-#成年人世界
-
+#励志
 </span>
 
 
 </div>
 
 
-
 </div>
 
 
-
-
-
-<!--功能模块-->
 
 <div class="features">
 
 
-
-<div class="feature">
-
+<div class="item">
 
 <h3>
-
 🔥 爆款标题生成
-
 </h3>
 
-
 <p>
-
-AI分析热门内容，快速生成高点击标题，提高视频打开率。
-
+自动生成高点击标题
 </p>
-
 
 </div>
 
 
 
-
-<div class="feature">
-
+<div class="item">
 
 <h3>
-
 🎬 视频脚本创作
-
 </h3>
 
-
 <p>
-
-自动生成短视频分镜、口播稿、剧情结构。
-
+生成完整短视频脚本
 </p>
-
 
 </div>
 
 
 
-
-<div class="feature">
-
+<div class="item">
 
 <h3>
-
-📖 AI小说创作
-
+📖 AI小说助手
 </h3>
 
-
 <p>
-
-辅助生成小说人物、剧情、大纲和章节内容。
-
+辅助小说人物和剧情创作
 </p>
 
-
 </div>
 
 
-
 </div>
-
-
-
-
-
-<!--会员区域-->
-
-<div class="vip">
-
-
-
-<div class="vip-box">
-
-
-<h3>
-
-免费体验版
-
-</h3>
-
-
-<br>
-
-
-<p>
-
-每日免费生成5次
-
-<br>
-
-基础文案模板
-
-<br>
-
-适合普通创作者
-
-</p>
-
-
-</div>
-
-
-
-
-
-<div class="vip-box">
-
-
-<h3>
-
-VIP创作会员
-
-</h3>
-
-
-<br>
-
-
-<p>
-
-无限生成
-
-<br>
-
-高级AI模型
-
-<br>
-
-保存历史作品
-
-<br>
-
-专属创作模板
-
-</p>
-
-
-</div>
-
-
-
-</div>
-
-
-
 
 
 
 <div class="footer">
 
-
-AI爆款文案大师 · 智能内容创作平台
-
+AI爆款文案大师 · 智能创作平台
 
 </div>
 
 
-
-
 </div>
-
 
 
 </body>
 
-
 </html>
-
-
