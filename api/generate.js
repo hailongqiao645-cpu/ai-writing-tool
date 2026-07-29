@@ -57,25 +57,36 @@ ${prompt}
     );
 
 
-    const data = await response.json();
+const data = await response.json();
 
 
-    return res.status(200).json({
+if(!response.ok){
 
-      result:
-      data.choices[0].message.content
+return res.status(response.status).json({
 
-    });
+error:data
+
+});
+
+}
 
 
-  } catch(error){
+return res.status(200).json({
 
-    return res.status(500).json({
+result:data.choices[0].message.content
 
-      error:error.message
+});
 
-    });
+catch(error){
 
-  }
+console.log(error);
+
+return res.status(500).json({
+
+error:error.message
+
+});
+
+}
 
 }
