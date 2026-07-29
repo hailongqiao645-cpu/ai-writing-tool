@@ -1,51 +1,360 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-<title>AI Tool</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI爆款文案大师</title>
 
 <style>
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Microsoft YaHei",sans-serif;
+}
+
 body{
-font-family:Arial;
-background:#f5f5f5;
-text-align:center;
-padding:50px;
+    background:#050816;
+    color:white;
 }
 
-.box{
-background:white;
-padding:30px;
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+
+/*顶部*/
+
+.logo{
+    text-align:center;
+    font-size:32px;
+    font-weight:bold;
+    background:linear-gradient(90deg,#ffd700,#ff8c00);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+
+.subtitle{
+    text-align:center;
+    margin-top:15px;
+    color:#aaa;
+    font-size:18px;
+}
+
+
+/* 主卡片 */
+
+.card{
+
+    margin-top:40px;
+    background:
+    rgba(255,255,255,0.08);
+
+    border-radius:25px;
+
+    padding:30px;
+
+    backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+}
+
+
+/*输入*/
+
+textarea{
+
+width:100%;
+
+height:130px;
+
 border-radius:15px;
-max-width:600px;
-margin:auto;
+
+padding:18px;
+
+font-size:16px;
+
+background:#111827;
+
+color:white;
+
+border:none;
+
+outline:none;
+
 }
 
-h1{
-color:#333;
+
+/*选择*/
+
+select{
+
+width:100%;
+
+margin-top:15px;
+
+padding:15px;
+
+border-radius:12px;
+
+background:#111827;
+
+color:white;
+
+border:none;
+
 }
+
+
+/按钮*/
+
+button{
+
+width:100%;
+
+margin-top:25px;
+
+padding:18px;
+
+border-radius:30px;
+
+border:none;
+
+font-size:18px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+background:
+linear-gradient(90deg,#ffcc00,#ff8800);
+
+color:#000;
+
+}
+
+
+/结果*/
+
+.result{
+
+margin-top:30px;
+
+background:#111827;
+
+padding:25px;
+
+border-radius:20px;
+
+line-height:1.8;
+
+color:#ddd;
+
+}
+
+
+.tag{
+
+display:inline-block;
+
+background:#222;
+
+padding:8px 15px;
+
+border-radius:20px;
+
+margin:5px;
+
+color:#ffd700;
+
+}
+
+
+.footer{
+
+text-align:center;
+
+margin-top:50px;
+
+color:#777;
+
+font-size:14px;
+
+}
+
 
 </style>
 
 </head>
 
+
 <body>
 
-<div class="box">
 
-<h1>
-AI 创作助手
-</h1>
+<div class="container">
 
-<p>
-你的第一个 AI 工具网站
-</p>
 
-<p>
-正在建设中...
-</p>
+<div class="logo">
+
+🔥 AI爆款文案大师
+
+</div>
+
+
+<div class="subtitle">
+
+让AI帮你每天生成热门短视频内容
+
+</div>
+
+
+
+<div class="card">
+
+
+<h2>
+输入你的创作主题
+</h2>
+
+
+<br>
+
+
+<textarea placeholder="例如：写一个关于中年重新开始的人生感悟视频"></textarea>
+
+
+
+<select>
+
+<option>
+选择发布平台
+</option>
+
+<option>
+抖音
+</option>
+
+<option>
+小红书
+</option>
+
+<option>
+视频号
+</option>
+
+<option>
+快手
+</option>
+
+</select>
+
+
+
+<select>
+
+<option>
+选择文案风格
+</option>
+
+<option>
+情感共鸣
+</option>
+
+<option>
+爆款营销
+</option>
+
+<option>
+故事叙事
+</option>
+
+<option>
+古风文案
+</option>
+
+
+</select>
+
+
+
+<button>
+
+立即生成爆款文案
+
+</button>
+
+
+
+<div class="result">
+
+<h3>
+AI生成示例：
+</h3>
+
+<br>
+
+
+标题：
+
+<br>
+
+成年人最大的清醒，是开始接受人生没有标准答案。
+
+
+<br><br>
+
+
+开头3秒：
+
+<br>
+
+你有没有发现，人到了一定年龄，最大的改变不是变成熟，而是不再抱怨。
+
+
+<br><br>
+
+
+热门标签：
+
+<br>
+
+<span class="tag">
+#人生感悟
+</span>
+
+<span class="tag">
+#成长
+</span>
+
+<span class="tag">
+#成年人世界
+</span>
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="footer">
+
+AI爆款文案大师 · 智能创作平台
+
+</div>
+
 
 </div>
 
 
 </body>
+
 </html>
