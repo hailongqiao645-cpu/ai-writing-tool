@@ -113,8 +113,11 @@
 
 const textarea=document.querySelector("textarea");
 
-const result=document.querySelector(".demo-output");
-
+const result=document.querySelector(".demo-output") || document.querySelector(".demo") || document.querySelector("section");
+if(!result){
+alert("没有找到结果显示区域");
+return;
+}
 
 if(!textarea.value){
 
